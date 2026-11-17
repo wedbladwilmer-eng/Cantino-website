@@ -1,0 +1,9 @@
+# Netlify: sajten i site/ är redan byggd (python3 tools/build.py körs lokalt och checkas in).
+# Bygget på Netlify hämtar bara veckans lunch från kvartersmenyn och skriver site/data/lunch.json.
+[build]
+  publish = "site"
+  command = "node tools/build-lunch.mjs"
+  functions = "netlify/functions"
+
+[build.environment]
+  NODE_VERSION = "20"

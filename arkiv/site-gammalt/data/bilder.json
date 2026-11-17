@@ -1,0 +1,13 @@
+{
+  "visaEtikett": true,
+  "etikett": "Tillfällig bild",
+  "bilder": {
+    "kottbullar": { "fil": "assets/img/kottbullar", "bredder": [480, 896], "hojd_per_bredd": 1.25, "alt": "Köttbullar med potatismos, gräddsås, lingon, gröna ärtor och pressgurka", "kalla": "cantinorestaurang.se, AI-genererad", "tillfallig": true },
+    "grill":      { "fil": "assets/img/grill",      "bredder": [480, 896], "hojd_per_bredd": 1.25, "alt": "Grillad kyckling och fläsk med grönsaker, majs och sås på en blå tallrik", "kalla": "cantinorestaurang.se, AI-genererad", "tillfallig": true },
+    "sallad":     { "fil": "assets/img/sallad",     "bredder": [480, 860], "hojd_per_bredd": 1.25, "alt": "Sallad med oliver, majs och ruccola", "kalla": "cantinorestaurang.se, stockfoto (Envato) – kontrollera licens", "tillfallig": true },
+    "vin":        { "fil": "assets/img/vin",        "bredder": [480, 860], "hojd_per_bredd": 1.25, "alt": "Dukat bord med vinglas och bestick", "kalla": "cantinorestaurang.se, stockfoto (Envato) – kontrollera licens", "tillfallig": true },
+    "matsal":     { "fil": "assets/img/matsal",     "bredder": [480, 960], "hojd_per_bredd": 1.25, "alt": "Matsalen med gäster vid borden och en grillad köttbit i förgrunden", "kalla": "cantinorestaurang.se, AI-genererad", "tillfallig": true },
+    "fasad":      { "fil": "assets/img/fasad",      "bredder": [640, 1067], "hojd_per_bredd": 0.625, "alt": "Cantinos fasad med blå skylt i skrivstil och gröna markiser", "kalla": "cantinorestaurang.se, AI-genererad", "tillfallig": true },
+    "pizza":      { "illustration": true, "alt": "Illustration av en nybakad pizza", "tillfallig": false }
+  }
+}

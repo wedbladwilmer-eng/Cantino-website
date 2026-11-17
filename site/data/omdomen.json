@@ -1,0 +1,13 @@
+{
+  "per": "november 2026",
+  "betyg": [
+    { "kalla": "Google", "varde": "4,9", "antal": 25, "stjarnor": 5, "lank": "google" },
+    { "kalla": "Foodora", "varde": "4,1", "antal": 27, "stjarnor": 4, "lank": "foodora" }
+  ],
+  "citatDemo": true,
+  "citat": [
+    { "text": "God husmanskost och trevlig personal. Salladsbuffén gör lunchen extra prisvärd.", "kalla": "Google" },
+    { "text": "Mysig stämning på torsdagsquizet. Vi kommer gärna tillbaka med laget.", "kalla": "Google" },
+    { "text": "Bra pizza och en lugn kvarterskrog i Örgryte. Snabb och vänlig service.", "kalla": "Google" }
+  ]
+}

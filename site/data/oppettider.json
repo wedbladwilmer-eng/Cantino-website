@@ -1,0 +1,13 @@
+{
+  "dagar": [
+    { "nr": 1, "dag": "Måndag",  "oppnar": "11:00", "stanger": "21:00" },
+    { "nr": 2, "dag": "Tisdag",  "oppnar": "11:00", "stanger": "21:00" },
+    { "nr": 3, "dag": "Onsdag",  "oppnar": "11:00", "stanger": "21:00" },
+    { "nr": 4, "dag": "Torsdag", "oppnar": "11:00", "stanger": "21:00" },
+    { "nr": 5, "dag": "Fredag",  "oppnar": "11:00", "stanger": "22:00" },
+    { "nr": 6, "dag": "Lördag",  "oppnar": "12:00", "stanger": "22:00" },
+    { "nr": 0, "dag": "Söndag",  "oppnar": "12:00", "stanger": "21:00" }
+  ],
+  "lunch": { "dagar": [1, 2, 3, 4, 5], "fran": "11:00", "till": "15:00" },
+  "notis": "Lunch serveras vardagar 11–15. À la carte från kl. 15."
+}

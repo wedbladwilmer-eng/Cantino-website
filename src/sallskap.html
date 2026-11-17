@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="sv">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sällskap &amp; event · Cantino Restaurang</title>
+<meta name="description" content="Bröllop, företagsevent, öppet hus eller något helt annat. Cantino i Örgryte tar emot sällskap från några få till hela restaurangen.">
+<meta name="theme-color" content="#111B2E">
+<link rel="canonical" href="%%SITE_URL%%/sallskap">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="sv_SE">
+<meta property="og:site_name" content="Cantino Restaurang">
+<meta property="og:title" content="Sällskap &amp; event · Cantino Restaurang">
+<meta property="og:image" content="%%SITE_URL%%/assets/img/og-cantino.jpg">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<!--FONTS-->
+<!--STYLE-->
+</head>
+<body class="page-sub">
+<!--HEADER-->
+
+<main id="top">
+<div id="innehall"></div>
+<section class="page-top">
+  <div class="wrap section-head">
+    <p class="label">Fira hos oss</p>
+    <h1>Sällskap &amp; event</h1>
+    <p class="intro">Bröllop, företagsevent, öppet hus eller något helt annat. Berätta vad du planerar, så tar vi fram ett upplägg som passar.</p>
+  </div>
+</section>
+
+<section class="wrap inquiry" aria-label="Förfrågan">
+  <div>
+    <ul class="offer">
+      <li><b>Egen meny</b><span>Vi sätter ihop en meny efter tillfället och budgeten.</span></li>
+      <li><b>Från några få till 50+ gäster</b><span>Mindre sällskap, halva lokalen eller hela restaurangen.</span></li>
+      <li><b>Hjälp med planeringen</b><span>Dukning, tider och upplägg, vi hjälper dig hela vägen.</span></li>
+    </ul>
+    <p class="promise">Vi svarar inom ett dygn.</p>
+    <figure>
+      <img src="/assets/foto/sallskap-1100.webp" srcset="/assets/foto/sallskap-640.webp 640w, /assets/foto/sallskap-1100.webp 1100w" sizes="(min-width: 900px) 40vw, 100vw" width="1100" height="880" loading="lazy" decoding="async" alt="Dukat bord med vinglas, bestick och röda servetter">
+    </figure>
+  </div>
+
+  <div>
+    <form class="form" id="event-form" name="eventforfragan" method="POST" action="/tack" data-netlify="true" netlify-honeypot="webbplats" novalidate>
+      <h2>Skicka en förfrågan</h2>
+      <input type="hidden" name="form-name" value="eventforfragan">
+      <p hidden><label for="f-hp">Lämna tomt</label><input id="f-hp" name="webbplats" tabindex="-1" autocomplete="off"></p>
+      <div class="form-row">
+        <div class="field"><label for="f-name">Namn</label><input id="f-name" name="namn" autocomplete="name" required aria-describedby="e-name"><p class="field-error" id="e-name" hidden></p></div>
+        <div class="field"><label for="f-phone">Telefon</label><input id="f-phone" name="telefon" type="tel" autocomplete="tel" inputmode="tel" required aria-describedby="e-phone"><p class="field-error" id="e-phone" hidden></p></div>
+      </div>
+      <div class="field"><label for="f-email">E-post</label><input id="f-email" name="epost" type="email" autocomplete="email" required aria-describedby="e-email"><p class="field-error" id="e-email" hidden></p></div>
+      <div class="form-row">
+        <div class="field"><label for="f-type">Typ av event</label>
+          <select id="f-type" name="typ" required aria-describedby="e-type">
+            <option value="" selected disabled>Välj</option>
+            <option>Bröllop</option><option>Företagsevent</option><option>Öppet hus</option><option>Annat</option>
+          </select><p class="field-error" id="e-type" hidden></p>
+        </div>
+        <div class="field"><label for="f-date">Datum</label><input id="f-date" name="datum" type="date" required aria-describedby="e-date"><p class="field-error" id="e-date" hidden></p></div>
+      </div>
+      <fieldset class="field" id="f-guests" aria-describedby="e-guests">
+        <legend>Antal gäster</legend>
+        <div class="sizes">
+          <label class="size"><input type="radio" name="gaster" id="f-g1" value="Upp till 25" required><span>Upp till 25</span></label>
+          <label class="size"><input type="radio" name="gaster" id="f-g2" value="26–50"><span>26–50</span></label>
+          <label class="size"><input type="radio" name="gaster" id="f-g3" value="Fler än 50"><span>Fler än 50</span></label>
+        </div>
+        <p class="field-error" id="e-guests" hidden></p>
+      </fieldset>
+      <div class="field"><label for="f-msg">Berätta mer <span class="opt">(valfritt)</span></label><textarea id="f-msg" name="meddelande" rows="3"></textarea></div>
+      <p class="form-error" id="form-error" role="alert" hidden></p>
+      <div class="form-foot">
+        <button class="submit" type="submit" id="f-submit">Skicka förfrågan</button>
+        <p>Bråttom? Ring oss, numret står längst ner.</p>
+      </div>
+    </form>
+    <div class="thanks" id="thanks" hidden tabindex="-1">
+      <h2 id="thanks-title">Tack för din förfrågan!</h2>
+      <p>Vi har tagit emot den och svarar inom ett dygn.</p>
+      <p class="demo" id="thanks-demo" hidden>Förhandsversion: förfrågan skickades inte. Formuläret kopplas vid lansering.</p>
+      <p><button class="submit" type="button" id="thanks-again">Skicka en till</button></p>
+    </div>
+  </div>
+</section>
+</main>
+
+<!--FOOTER-->
+<script type="text/x-page">
+  var form = $("#event-form"), thanks = $("#thanks"), err = $("#form-error"), btn = $("#f-submit");
+  $("#f-date").min = now.y + "-" + String(now.m).padStart(2, "0") + "-" + String(now.d).padStart(2, "0");
+  var checks = [
+    { id: "f-name", e: "e-name", msg: "Skriv ditt namn." },
+    { id: "f-phone", e: "e-phone", msg: "Skriv ett telefonnummer vi kan nå dig på.", test: function (v) { return v.replace(/[^\d]/g, "").length >= 7; } },
+    { id: "f-email", e: "e-email", msg: "Skriv en giltig e-postadress, till exempel namn@exempel.se." },
+    { id: "f-type", e: "e-type", msg: "Välj typ av event." },
+    { id: "f-date", e: "e-date", msg: "Välj ett datum från och med i dag." }
+  ];
+  function setErr(field, eId, msg) {
+    var e = document.getElementById(eId), wrap = field.closest(".field");
+    e.textContent = msg || ""; e.hidden = !msg; wrap.classList.toggle("has-error", !!msg);
+    field.setAttribute("aria-invalid", msg ? "true" : "false");
+  }
+  function check(c) { var f = document.getElementById(c.id); return f.checkValidity() && (!c.test || c.test(f.value)); }
+  function validate() {
+    var firstBad = null;
+    checks.forEach(function (c) { var f = document.getElementById(c.id), ok = check(c); setErr(f, c.e, ok ? "" : c.msg); if (!ok && !firstBad) firstBad = f; });
+    var g = form.querySelector('input[name="gaster"]:checked');
+    setErr($("#f-guests"), "e-guests", g ? "" : "Välj ungefär hur många gäster ni blir."); if (!g && !firstBad) firstBad = $("#f-g1");
+    return firstBad;
+  }
+  function recheck(e) { var c = checks.filter(function (x) { return x.id === e.target.id; })[0]; if (c && e.target.closest(".has-error")) setErr(e.target, c.e, check(c) ? "" : c.msg); if (e.target.name === "gaster") setErr($("#f-guests"), "e-guests", ""); }
+  form.addEventListener("input", recheck);
+  form.addEventListener("change", recheck);
+  form.addEventListener("submit", function (e) {
+    e.preventDefault(); err.hidden = true;
+    var bad = validate();
+    if (bad) { err.textContent = "Några uppgifter saknas eller behöver rättas. Se markeringarna ovan."; err.hidden = false; bad.focus(); return; }
+    if ($("#f-hp").value) return;
+    btn.disabled = true; btn.textContent = "Skickar …";
+    siteReady.then(function () {
+      var mode = (site.formular || "").trim(), demo = !mode, req;
+      if (mode === "netlify") req = fetch("/", { method: "POST", headers: { "Content-Type": "application/x-www-form-urlencoded" }, body: new URLSearchParams(new FormData(form)).toString() });
+      else if (mode) req = fetch(mode, { method: "POST", headers: { Accept: "application/json" }, body: new FormData(form) });
+      else req = Promise.resolve({ ok: true });
+      return req.then(function (res) {
+        if (!res.ok) throw new Error("status");
+        $("#thanks-title").textContent = "Tack, " + $("#f-name").value.trim().split(/\s+/)[0] + "!";
+        $("#thanks-demo").hidden = !demo; form.hidden = true; thanks.hidden = false; thanks.focus();
+      });
+    }).catch(function () {
+      err.textContent = "Förfrågan kunde inte skickas just nu. Försök igen om en stund eller ring 076-029 26 26."; err.hidden = false;
+    }).then(function () { btn.disabled = false; btn.textContent = "Skicka förfrågan"; });
+  });
+  $("#thanks-again").addEventListener("click", function () { form.reset(); thanks.hidden = true; form.hidden = false; $("#f-name").focus(); });
+</script>
+<!--SCRIPT-->
+</body>
+</html>

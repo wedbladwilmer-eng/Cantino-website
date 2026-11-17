@@ -1,0 +1,16 @@
+{
+  "demo": true,
+  "etikett": "Exempellunch – byts mot er riktiga",
+  "vecka": "auto",
+  "pris": "145 kr",
+  "ingar": "Läsk, salladsbuffé, kaffe och kaka",
+  "dagar": [
+    { "dag": "Måndag",  "ratter": ["Köttbullar med potatismos, gräddsås, lingon och pressgurka", "Stekt strömming med potatismos och lingon"], "vegetariskt": "Grönsaksbiffar med potatismos och lingon" },
+    { "dag": "Tisdag",  "ratter": ["Kåldolmar med kokt potatis, gräddsås och lingon", "Pasta carbonara"], "vegetariskt": "Pasta med tomatsås, basilika och mozzarella" },
+    { "dag": "Onsdag",  "ratter": ["Fläskpannkaka med lingon", "Panerad fiskfilé med kokt potatis och pepparrotssås"], "vegetariskt": "Rödbetsbiffar med kokt potatis och pepparrotskräm" },
+    { "dag": "Torsdag", "ratter": ["Pannbiff med kokt potatis, pressgurka, gräddsås och lingon", "Ärtsoppa med pannkakor och sylt"], "vegetariskt": "Vegetarisk ärtsoppa med pannkakor och sylt" },
+    { "dag": "Fredag",  "ratter": ["Wallenbergare med potatismos, gröna ärtor och lingon", "Fiskgratäng med dillpotatis"], "vegetariskt": "Svamprisotto med parmesan" }
+  ],
+  "lunchkort": { "visa": false, "text": "Lunchkort: var tionde lunch bjuder vi på." },
+  "takeAway": { "visa": false, "text": "Ring och beställ lunchen som take away: 076-029 26 26." }
+}

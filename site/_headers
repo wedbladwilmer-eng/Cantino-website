@@ -1,0 +1,17 @@
+# Demo: ta bort raden X-Robots-Tag när sajten blir Cantinos riktiga.
+/*
+  X-Robots-Tag: noindex
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+
+/assets/fonts/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/assets/img/*
+  Cache-Control: public, max-age=604800
+
+/data/*
+  Cache-Control: no-cache
+
+/assets/js/*
+  Cache-Control: public, max-age=300, must-revalidate

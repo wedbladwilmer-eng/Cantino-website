@@ -1,0 +1,10 @@
+{
+  "demo": true,
+  "etikett": "Exempelsvar – byts mot era egna",
+  "faq": [
+    { "fraga": "Behöver man boka?", "svar": "Vi rekommenderar att boka bord, ring 076-029 26 26. Det går också bra att komma förbi och se om det finns plats." },
+    { "fraga": "Hur många får vara i ett lag?", "svar": "Upp till sex personer per lag. Det går bra att vara färre." },
+    { "fraga": "Kostar det något?", "svar": "Det är gratis att vara med." },
+    { "fraga": "Måste man äta?", "svar": "Nej, men köket är öppet hela kvällen och många passar på att äta middag under quizet." }
+  ]
+}

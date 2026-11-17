@@ -1,0 +1,41 @@
+{
+  "demo": true,
+  "etikett": "Exempelmeny – byts mot er riktiga",
+  "kategorier": [
+    { "id": "forratter", "namn": "Förrätter", "bild": "sallad", "ratter": [
+      { "namn": "Toast Skagen", "beskrivning": "Räkor, majonnäs, dill och löjrom på smörstekt bröd", "pris": "125 kr" },
+      { "namn": "Caesarsallad", "beskrivning": "Romansallad, krutonger, parmesan och caesardressing", "pris": "115 kr" },
+      { "namn": "Bruschetta", "beskrivning": "Rostat bröd med tomat, basilika, vitlök och olivolja", "pris": "95 kr" }
+    ]},
+    { "id": "varmratter", "namn": "Varmrätter & grill", "bild": "grill", "ratter": [
+      { "namn": "Hjortytterfilé", "beskrivning": "Rödvinssky, rostade rotfrukter och svampfricassé", "pris": "199 kr" },
+      { "namn": "Grillad entrecôte", "beskrivning": "Bearnaisesås, pommes och grillad tomat", "pris": "189 kr" },
+      { "namn": "Grillat kycklingspett", "beskrivning": "Tzatziki, klyftpotatis och grönsallad", "pris": "159 kr" },
+      { "namn": "Grillad lax", "beskrivning": "Citronsmör, dillpotatis och säsongens grönsaker", "pris": "179 kr" },
+      { "namn": "Halloumispett", "beskrivning": "Grillade grönsaker, bulgur och myntayoghurt", "pris": "149 kr", "vegetarisk": true }
+    ]},
+    { "id": "pizza", "namn": "Pizza", "bild": "pizza", "notis": "Nybakad, direkt ur ugnen.", "ratter": [
+      { "namn": "Margherita", "beskrivning": "Tomatsås, mozzarella och färsk basilika", "pris": "119 kr", "vegetarisk": true },
+      { "namn": "Vesuvio", "beskrivning": "Tomatsås, ost och skinka", "pris": "125 kr" },
+      { "namn": "Capricciosa", "beskrivning": "Tomatsås, ost, skinka och champinjoner", "pris": "135 kr" },
+      { "namn": "Hawaii", "beskrivning": "Tomatsås, ost, skinka och ananas", "pris": "135 kr" },
+      { "namn": "Kebabpizza", "beskrivning": "Tomatsås, ost, kebabkött, lök, pepperoni och kebabsås", "pris": "145 kr" },
+      { "namn": "Cantino", "beskrivning": "Husets special: oxfilé, rödlök, ruccola och bearnaisesås", "pris": "165 kr", "husets": true }
+    ]},
+    { "id": "desserter", "namn": "Desserter", "bild": "vin", "ratter": [
+      { "namn": "Chokladfondant", "beskrivning": "Med vaniljglass och bär", "pris": "95 kr" },
+      { "namn": "Pannacotta", "beskrivning": "Med hallonsås och rostad mandel", "pris": "89 kr" },
+      { "namn": "Kladdkaka", "beskrivning": "Med vispad grädde", "pris": "79 kr" }
+    ]},
+    { "id": "dryck", "namn": "Dryck", "bild": "vin", "ratter": [
+      { "rubrik": "Vin" },
+      { "namn": "Husets röda", "beskrivning": "Glas / flaska", "pris": "95 / 395 kr" },
+      { "namn": "Husets vita", "beskrivning": "Glas / flaska", "pris": "95 / 395 kr" },
+      { "rubrik": "Champagne" },
+      { "namn": "Champagne brut", "beskrivning": "Flaska", "pris": "795 kr" },
+      { "rubrik": "Öl och alkoholfritt" },
+      { "namn": "Öl på fat", "beskrivning": "40 cl", "pris": "75 kr" },
+      { "namn": "Läsk och lättöl", "beskrivning": "33 cl", "pris": "35 kr" }
+    ]}
+  ]
+}

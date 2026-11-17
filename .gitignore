@@ -1,0 +1,12 @@
+# Lokala filer som inte hör hemma i repot
+node_modules/
+.netlify/
+.env
+.env.*
+verify/
+nedladdning/
+preview/
+*.zip
+.DS_Store
+# Skapas vid bygget på Netlify (hämtas från kvartersmenyn)
+site/data/lunch.json

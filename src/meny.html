@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="sv">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Kvällsmenyn · Cantino Restaurang</title>
+<meta name="description" content="Kvällsmenyn på Cantino i Örgryte: förrätter, grillrätter, nybakad pizza, desserter, vin och champagne. À la carte från kl. 15.">
+<meta name="theme-color" content="#111B2E">
+<link rel="canonical" href="%%SITE_URL%%/meny">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="sv_SE">
+<meta property="og:site_name" content="Cantino Restaurang">
+<meta property="og:title" content="Kvällsmenyn · Cantino Restaurang">
+<meta property="og:image" content="%%SITE_URL%%/assets/img/og-cantino.jpg">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<!--FONTS-->
+<!--STYLE-->
+</head>
+<body class="page-sub">
+<!--HEADER-->
+
+<main id="top">
+<div id="innehall"></div>
+<section class="page-top">
+  <div class="wrap section-head">
+    <p class="label">À la carte från kl. 15</p>
+    <h1>Kvällsmenyn</h1>
+    <p class="intro">Grillrätter, nybakad pizza och ett glas vin eller champagne till. Fråga gärna personalen om allergener.</p>
+    <p class="back"><a class="textlink" href="https://www.foodora.se/" target="_blank" rel="noopener" data-link="foodora">Beställ via Foodora</a></p>
+  </div>
+</section>
+<section class="menu-full" aria-label="Hela menyn">
+  <div class="wrap">
+    <div class="menu-cols" id="menu-all"></div>
+    <p class="demo" id="menu-demo" style="margin-top:56px;text-align:center;font-style:italic;color:var(--muted);font-size:.9rem" hidden></p>
+  </div>
+</section>
+</main>
+
+<!--FOOTER-->
+<script type="text/x-page">
+  getJSON("meny").then(function (M) {
+    var box = $("#menu-all");
+    M.kategorier.forEach(function (cat) { box.appendChild(renderCategory(cat)); });
+    if (M.demo && M.etikett) { var d = $("#menu-demo"); d.textContent = M.etikett; d.hidden = false; }
+  }).catch(function () {
+    $("#menu-all").appendChild(el("p", null, "Menyn kunde inte laddas just nu. Ring 076-029 26 26 så berättar vi."));
+  });
+</script>
+<!--SCRIPT-->
+</body>
+</html>

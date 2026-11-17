@@ -1,0 +1,32 @@
+<svg class="pizza-art" viewBox="0 0 400 500" role="img" aria-labelledby="pizza-title" xmlns="http://www.w3.org/2000/svg">
+  <title id="pizza-title">Illustration av en nybakad pizza på en träspade</title>
+  <defs>
+    <radialGradient id="pz-bg" cx=".5" cy=".45" r=".7"><stop offset="0" stop-color="#1C2C52"/><stop offset="1" stop-color="#0E1A33"/></radialGradient>
+    <radialGradient id="pz-crust" cx=".5" cy=".5" r=".5"><stop offset=".82" stop-color="#E9B266"/><stop offset=".93" stop-color="#C9843F"/><stop offset="1" stop-color="#9E5E2A"/></radialGradient>
+  </defs>
+  <rect width="400" height="500" fill="url(#pz-bg)"/>
+  <!-- träspade -->
+  <rect x="186" y="380" width="28" height="140" rx="10" fill="#8A5A33"/>
+  <circle cx="200" cy="250" r="160" fill="#A8743F"/>
+  <g stroke="#94632F" stroke-width="2" opacity=".6" fill="none"><path d="M60 220q140-10 280 0M48 260q152-8 304 0M60 300q140-6 280 0"/></g>
+  <!-- pizza -->
+  <circle cx="200" cy="250" r="138" fill="url(#pz-crust)"/>
+  <circle cx="200" cy="250" r="118" fill="#C2412D"/>
+  <g fill="#F6E3A8">
+    <ellipse cx="160" cy="200" rx="26" ry="20"/><ellipse cx="240" cy="190" rx="22" ry="18"/><ellipse cx="200" cy="250" rx="28" ry="22"/>
+    <ellipse cx="140" cy="280" rx="22" ry="18"/><ellipse cx="260" cy="270" rx="26" ry="20"/><ellipse cx="200" cy="320" rx="24" ry="18"/>
+    <ellipse cx="290" cy="220" rx="14" ry="11"/><ellipse cx="115" cy="235" rx="12" ry="10"/>
+  </g>
+  <g fill="#E9C978" opacity=".8"><circle cx="165" cy="196" r="6"/><circle cx="205" cy="246" r="7"/><circle cx="262" cy="266" r="6"/><circle cx="198" cy="318" r="5"/></g>
+  <g fill="#3E7A4E">
+    <path d="M182 168c10-14 30-12 34 2-12 10-26 10-34-2z"/>
+    <path d="M232 238c14-6 30 4 28 18-14 4-26-4-28-18z"/>
+    <path d="M150 248c-4-14 10-26 24-20 0 14-12 24-24 20z"/>
+    <path d="M222 300c10-12 28-8 30 6-12 8-26 6-30-6z"/>
+  </g>
+  <g fill="#7A3B22" opacity=".5"><circle cx="84" cy="230" r="4"/><circle cx="310" cy="300" r="5"/><circle cx="250" cy="122" r="4"/><circle cx="140" cy="370" r="4"/></g>
+  <!-- ånga -->
+  <g fill="none" stroke="#F6F0E4" stroke-opacity=".35" stroke-width="3" stroke-linecap="round">
+    <path d="M160 70q-10 15 0 30t0 30"/><path d="M200 56q-10 15 0 30t0 30"/><path d="M240 70q-10 15 0 30t0 30"/>
+  </g>
+</svg>
