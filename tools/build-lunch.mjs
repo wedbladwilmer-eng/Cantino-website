@@ -60,7 +60,13 @@ async function main() {
   if (senasteAnrop && !schemalagt && !tvinga) { logg("inget schemalagt bygge, återanvänder senaste hämtningen (" + senasteAnrop + ")"); return skriv(tidigare); }
 
   const grund = { version: 1, kalla: "kvartersmenyn", hamtad: new Date().toISOString(), hamtad_datum: idag, anropad_datum: senasteAnrop || null };
-  if (!KEY || !CUSTOMER) { logg("KVARTERSMENYN_API_KEY eller KVARTERSMENYN_CUSTOMER_ID saknas, ingen hämtning"); return skriv({ ...grund, status: "saknas", orsak: "konfiguration" }); }
+  if (!KEY || !CUSTOMER) {
+    // Felsökning utan att avslöja något: bara NAMN på variabler som liknar de förväntade, aldrig värden
+    const saknade = [["KVARTERSMENYN_API_KEY", KEY], ["KVARTERSMENYN_CUSTOMER_ID", CUSTOMER]].filter(([, v]) => !v).map(([n]) => n);
+    const liknande = Object.keys(process.env).filter((n) => /kvarter|menyn|customer|api_?key/i.test(n)).sort();
+    logg("saknas: " + saknade.join(", ") + ". Liknande variabelnamn i bygget: " + (liknande.join(", ") || "inga"));
+    return skriv({ ...grund, status: "saknas", orsak: "konfiguration", saknade_variabler: saknade, liknande_variabelnamn: liknande });
+  }
   grund.anropad_datum = idag; // från och med här räknas dagens enda anrop som gjort
 
   const url = `https://www.kvartersmenyn.se/api_rest/get_menu/api_key/${encodeURIComponent(KEY)}/customer_id/${encodeURIComponent(CUSTOMER)}`;
