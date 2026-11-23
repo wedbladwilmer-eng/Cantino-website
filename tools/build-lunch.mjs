@@ -54,11 +54,14 @@ async function main() {
   let tidigare = null;
   try { const r = await hamtaJson(SITE_URL + "/data/lunch.json", 8000); if (r.status === 200) tidigare = JSON.parse(r.text); } catch {}
 
-  if (tidigare && tidigare.hamtad_datum === idag) { logg("dagens hämtning är redan gjord, återanvänder den"); return skriv(tidigare); }
-  if (tidigare && !schemalagt && !tvinga) { logg("inget schemalagt bygge, återanvänder senaste hämtningen (" + tidigare.hamtad_datum + ")"); return skriv(tidigare); }
+  // anropad_datum = dagen då kvartersmenyn senast faktiskt anropades (följer med när filen återanvänds)
+  const senasteAnrop = tidigare && tidigare.anropad_datum;
+  if (senasteAnrop === idag) { logg("dagens anrop är redan gjort, återanvänder den publicerade filen"); return skriv(tidigare); }
+  if (senasteAnrop && !schemalagt && !tvinga) { logg("inget schemalagt bygge, återanvänder senaste hämtningen (" + senasteAnrop + ")"); return skriv(tidigare); }
 
-  const grund = { version: 1, kalla: "kvartersmenyn", hamtad: new Date().toISOString(), hamtad_datum: idag };
+  const grund = { version: 1, kalla: "kvartersmenyn", hamtad: new Date().toISOString(), hamtad_datum: idag, anropad_datum: senasteAnrop || null };
   if (!KEY || !CUSTOMER) { logg("KVARTERSMENYN_API_KEY eller KVARTERSMENYN_CUSTOMER_ID saknas, ingen hämtning"); return skriv({ ...grund, status: "saknas", orsak: "konfiguration" }); }
+  grund.anropad_datum = idag; // från och med här räknas dagens enda anrop som gjort
 
   const url = `https://www.kvartersmenyn.se/api_rest/get_menu/api_key/${encodeURIComponent(KEY)}/customer_id/${encodeURIComponent(CUSTOMER)}`;
   let svar;
@@ -84,5 +87,5 @@ async function main() {
 main().catch((e) => {
   // Bygget får aldrig falla på lunchen
   console.log("[lunch] oväntat fel: " + tvatta(e && e.message));
-  return skriv({ version: 1, status: "saknas", orsak: "fel", hamtad: new Date().toISOString(), hamtad_datum: stockholmIdag() }).catch(() => {});
+  return skriv({ version: 1, status: "saknas", orsak: "fel", hamtad: new Date().toISOString(), hamtad_datum: stockholmIdag(), anropad_datum: null }).catch(() => {});
 });
