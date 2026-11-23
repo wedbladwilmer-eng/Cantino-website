@@ -35,7 +35,10 @@ export function stockholmIdag(date = new Date()) {
 
 async function hamtaJson(url, ms) {
   const ctrl = new AbortController(); const t = setTimeout(() => ctrl.abort(), ms);
-  try { const r = await fetch(url, { signal: ctrl.signal, headers: { accept: "application/json" } }); return { status: r.status, text: await r.text() }; }
+  try {
+    const r = await fetch(url, { signal: ctrl.signal, headers: { accept: "application/json", "user-agent": "Cantino-restaurang/1.0 (+https://cantino-restaurang.netlify.app)" } });
+    return { status: r.status, typ: r.headers.get("content-type") || "", text: await r.text() };
+  }
   finally { clearTimeout(t); }
 }
 
@@ -86,7 +89,11 @@ async function main() {
   }
 
   const meny = svar.status === 200 && json ? parseMenu(json) : null;
-  if (!meny) return skriv({ ...grund, status: "saknas", orsak: svar.status === 404 ? "ingen-meny" : "tolkning", http_status: svar.status });
+  if (!meny) {
+    const diagnos = svar.status === 404 ? undefined : { innehallstyp: svar.typ, svar_borjan: svar.text.replace(/\s+/g, " ").slice(0, 300) };
+    if (diagnos) logg("svar (början): " + diagnos.svar_borjan);
+    return skriv({ ...grund, status: "saknas", orsak: svar.status === 404 ? "ingen-meny" : "tolkning", http_status: svar.status, diagnos });
+  }
   return skriv({ ...grund, status: "meny", ...meny });
 }
 
